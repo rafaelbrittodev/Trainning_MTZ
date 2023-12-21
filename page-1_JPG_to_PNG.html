@@ -10,15 +10,40 @@
         div {
             margin: 10px;
         }
+        nav ul {
+            display: flex;
+            list-style: none;
+            margin: 0px;
+        }
+        nav ul li a {
+            padding: 10px 160px; 
+            text-decoration: none;
+        }
+        nav ul li a:hover {
+            color: blue;
+            padding: 10px 160px; 
+        }
+
     </style>
 </head>
 
 <body>
-    <div id="menu_up">
-        <h1><img width="250" src="img/logo_converttoo.png"></h1>
-        <hr />
-    </div>
+    <header>
+        <div id="menu_up">
+            <nav>
+                <h1 class="logo_inicial"><img width="250" src="img/logo_converttoo.png"></h1>
+                <ul>
+                    <li><a href="index_MTZ_Trainning.html">Página inicial</a></li>
+                    <li><a href="pg_user_terms.html">Termos de uso</a></li>
+                    <li><a href="pg_cadastrar_user.html">Novo cadastro</a></li>
+                    <li><a href="#"><u>Login</u></a></li>
+                </ul>
+            </nav>
+            <hr />
+        </div>
+    </header>
 
+    <main>
     <div id="body">
     <h2><strong>Converta seu arquivo JPG para PNG.</strong></h2>
 
@@ -31,6 +56,11 @@
 
     </ul>
     </div>
+    </main>
+
+    <footer>
+        
+    </footer>
 </body>
 
 </html>

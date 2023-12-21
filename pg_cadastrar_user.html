@@ -22,43 +22,71 @@
             margin: 10px;
             border-radius: 10px;
         }
+        nav ul {
+            display: flex;
+            list-style: none;
+            margin: 0px;
+        }
+        nav ul li a {
+            padding: 10px 160px; 
+            text-decoration: none;
+        }
+        nav ul li a:hover {
+            color: blue;
+            padding: 10px 160px; 
+        }
+
     </style>
 </head>
 
 <body>
-    <div class="menu" id="menu_up">
-        <h1><img width="250" src="img/logo_converttoo.png"></h1>
-        <hr />
-    </div>
+    <header>
+        <div id="menu_up">
+            <nav>
+                <h1 class="logo_inicial"><img width="250" src="img/logo_converttoo.png"></h1>
+                <ul>
+                    <li><a href="index_MTZ_Trainning.html">Página inicial</a></li>
+                    <li><a href="pg_user_terms.html">Termos de uso</a></li>
+                    <li><a href="pg_cadastrar_user.html">Novo cadastro</a></li>
+                    <li><a href="#"><u>Login</u></a></li>
+                </ul>
+            </nav>
+            <hr />
+        </div>
+    </header>
 
-    <fieldset>
-        <legend>Novo Cadastro</legend>
-        <div class="row">
-            <form onsubmit="alert('Cadastro realizado!');" method="get">
-                <label>Nome completo *:</label><p><input type="text" name="name" /></p><p></p>
-                <label>Data de nascimento *:</label><p><input type="date" name="birthday" /></p>
+    <main>
+        <fieldset>
+            <legend>Novo Cadastro</legend>
+            <div class="row">
+                <form onsubmit="alert('Cadastro realizado!');" method="get">
+                    <label>Nome completo *:</label><p><input required type="text" name="name" /></p><p></p>
+                    <label>Data de nascimento *:</label><p><input required type="date" name="birthday" /></p>
+            </div>
+            <div class="row">
+                    <label>Email *:</label><p><input required minlength="3" type="email" name="Email" /></p>
+                    <label>Senha *:</label><p><input required minlength="9" type="password" name="password" /></p>
+            </div>
+            <div class="row">
+                    <label>Aceito os <a href="pg_user_terms.html" title="user_terms" target="_blank">termos de uso</a> <input type="checkbox" name="acept_terms[]" value="acept_terms" /></label><p></p>
+            </div>
+            
+        <div class="button_area">
+                <button type="submit">Cadastrar</button>
+            </form>
         </div>
-        <div class="row">
-                <label>Email *:</label><p><input type="email" name="Email" /></p>
-                <label>Senha *:</label><p><input type="password" name="password" /></p>
-        </div>
-        <div class="row">
-                <label>Aceito os <a href="pg_user_terms.html" title="user_terms" target="_blank">termos de uso</a> <input type="checkbox" name="acept_terms[]" value="acept_terms" /></label><p></p>
-        </div>
-    
-    <div class="button_area">
-            <button type="submit">Cadastrar</button>
-        </form>
-    </div>
-    </fieldset>
+        </fieldset>
+    </main>
 
-    <div class="body">
-        <ul>
-            <li>
-                <a href="index_MTZ_Trainning.html" title="Voltar para o menu inicial."> Voltar para o início.</a>
-            </li>
-        </ul>
-    </div>
+    <footer>
+        <div>
+            <ul>
+                <li>
+                    <a href="index_MTZ_Trainning.html" title="Voltar para o menu inicial."> Voltar para o início.</a>
+                </li>
+            </ul>
+        </div>
+    </footer>
     
 </body>
 </html>

@@ -10,103 +10,129 @@
         fieldset {
             margin: 10px;
             border-radius: 10px;
-            width: 600px;
+            width: 1820px;
+            height: 30px;
         }
         div {
             margin: 10px;
         }
+        nav ul {
+            display: flex;
+            list-style: none;
+            margin: 0px;
+        }
+        nav ul li a {
+            padding: 10px 160px; 
+            text-decoration: none;
+        }
+        nav ul li a:hover {
+            color: blue;
+            padding: 10px 160px; 
+        }
+
 
     </style>
 </head>
 
 <body>
-    <div id="menu_up">
-        <h1 class="format"><img width="250" src="img/logo_converttoo.png"></h1>
-        <hr />
-    </div>
-
-
-    <div id="body">
-        <h2><strong>Ferramenta online para converter seus arquivos</strong></h2>
-        <p><font face="Arial">Ferramenta <strong>online e 100% gratuita</strong> para converter documentos Office, PDF, JPG, PNG.</font></p>
-
-        <fieldset>
-            <div id="convert_options">
+    <header>
+        <div id="menu_up">
+            <nav>
+                <h1 class="logo_inicial"><img width="250" src="img/logo_converttoo.png"></h1>
                 <ul>
-                    <li><a href="pg_cadastrar_user.html" title="Cadastrar novo usuário"> Cadastrar novo usuário</a></li>
-
-                    <li><a href="page-1_JPG_to_PNG.html" title="JPG para PNG"> JPG para PNG</a></li>
-                    <li><a href="page-2_PNG_to_JPG.html" title="PNG para JPEG"> PNG para JPEG</a></li>
-                    <li><a href="page-3_PDF_to_JPG.html" title="PDF para JPEG"> PDF para JPEG</a></li>
-                    <li><a href="page-4_PDF_to_WORD.html" title="PDF para Word"> PDF para Word</a></li>
+                    <li><a href="index_MTZ_Trainning.html">Página inicial</a></li>
+                    <li><a href="pg_user_terms.html">Termos de uso</a></li>
+                    <li><a href="pg_cadastrar_user.html">Novo cadastro</a></li>
+                    <li><a href="#"><u>Login</u></a></li>
                 </ul>
+            </nav>
+            <hr />
+        </div>
+    </header>
+
+    <main>
+        <div id="body">
+            <h2><strong>Ferramenta online para converter seus arquivos</strong>"</h2>
+            <p><meta name="description" content="Ferramenta online e 100% gratuita para converter documentos Office, PDF, JPG, PNG."/></p>
+        <nav class="menu_convert">
+            <fieldset>
+                <div id="convert_options">
+                    <ul>
+                        <li><a href="page-1_JPG_to_PNG.html" title="JPG para PNG"> JPG para PNG</a></li>
+                        <li><a href="page-2_PNG_to_JPG.html" title="PNG para JPEG"> PNG para JPEG</a></li>
+                        <li><a href="page-3_PDF_to_JPG.html" title="PDF para JPEG"> PDF para JPEG</a></li>
+                        <li><a href="page-4_PDF_to_WORD.html" title="PDF para Word"> PDF para Word</a></li>
+                    </ul>
+                </div>
+            </fieldset>
+        </nav>
+
+        <article>
+                <h3>A importância de um site conversor de arquivos</h3>
+
+                <p>No mundo digital de hoje, é cada vez mais comum precisarmos converter arquivos de um formato para outro. Isso pode ser necessário por diversos motivos, como por exemplo:</p>
+                
+                <ol>
+                    <p></p>
+                    <li><strong>Compatibilidade:</strong></li>
+                    <p>Nem sempre todos os dispositivos ou programas suportam todos os formatos de arquivo. Por exemplo, você pode precisar converter um documento de Word para PDF para poder enviá-lo por e-mail ou imprimi-lo.</p>
+                    <p></p>
+                    <li><strong>Tamanho:</strong></li>
+                    <p>Alguns formatos de arquivo são maiores do que outros. Se você precisar enviar um arquivo por e-mail ou armazená-lo na nuvem, pode ser necessário convertê-lo para um formato menor.</p>
+                    <p></p>
+                    <li><strong>Edição:</strong></li>
+                    <p>Alguns formatos de arquivo são mais adequados para edição do que outros. Por exemplo, se você precisar editar um vídeo, é melhor convertê-lo para um formato que seja suportado pelo editor de vídeo que você está usando.</p>
+                </ol>
+
+                <p>Para converter arquivos, podemos usar um software instalado no computador ou um site conversor de arquivos online. Os softwares instalados oferecem mais recursos, mas são mais caros e difíceis de usar. Os sites conversores de arquivos online são mais simples e gratuitos, mas geralmente oferecem menos recursos.</p>
+
+                <p>Os sites conversores de arquivos oferecem diversos benefícios, como facilidade de uso, acessibilidade, versatilidade e segurança. Ao selecionar um site conversor de arquivos, é importante considerar os formatos de conversão, qualidade da conversão e segurança.</p>
+
+                <p>Os sites conversores de arquivos são uma ferramenta essencial para quem precisa converter arquivos com frequência. Eles são fáceis de usar, acessíveis e oferecem uma ampla variedade de formatos de conversão.</p>
+            
+        </article>
+                <h3><i>Título 3</i></h3>
+                <h4><u>Título 4</u></h4>
+                <h5>Título <sub>5</sub></h5>
+                <h6>Título <sup>6</sup></h6>
+
+                <blockquote><small>Einstein <del>disse:</del> </small><mark>"A imaginação é mais importante que o conhecimento."</mark></blockquote>
+                <p><abbr title="Einstein">Eins</abbr></p>
             </div>
-        </fieldset>
 
-        <h3>A importância de um site conversor de arquivos</h3>
+        <div>
+            <table border="1" summary= width="1050" align="center" cellspacing="5" cellpadding="30">
+                <caption style="font-size: 35px;">Planos disponíveis</caption>
+                <tbody>
+                    <tr id="teste1">
+                        <td></td>
+                        <th style="font-size: 25px; text-align: center;">Básico Freemium</th>
+                        <th style="font-size: 25px; text-align: center;">Total Pass</th>
+                    </tr>
+                    <tr>
+                        <th style="font-size: 25px;">Plano mensal</th>
+                        <td style="font-size: 25px; text-align: center;">$ 00</td>
+                        <td style="font-size: 25px; text-align: center;">$ 3,33</td>
+                    </tr>
+                    <tr>
+                        <th style="font-size: 25px;">Processar documentos</th>
+                        <td style="font-size: 25px; text-align: center;">∞ Documentos ilimitados</td>
+                        <td style="font-size: 25px; text-align: center;">∞ Documentos ilimitados</td>
+                    </tr>
+                    <tr>
+                        <th style="font-size: 25px;">Publicidade e propagandas</th>
+                        <td style="font-size: 25px; text-align: center;">Contém anúncios</td>
+                        <td style="font-size: 25px; text-align: center;">Livre de anúncios</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
 
-        <p>No mundo digital de hoje, é cada vez mais comum precisarmos converter arquivos de um formato para outro. Isso pode ser necessário por diversos motivos, como por exemplo:</p>
-        
-        <ol>
-            <p></p>
-            <li><strong>Compatibilidade:</strong></li>
-            <p>Nem sempre todos os dispositivos ou programas suportam todos os formatos de arquivo. Por exemplo, você pode precisar converter um documento de Word para PDF para poder enviá-lo por e-mail ou imprimi-lo.</p>
-            <p></p>
-            <li><strong>Tamanho:</strong></li>
-            <p>Alguns formatos de arquivo são maiores do que outros. Se você precisar enviar um arquivo por e-mail ou armazená-lo na nuvem, pode ser necessário convertê-lo para um formato menor.</p>
-            <p></p>
-            <li><strong>Edição:</strong></li>
-            <p>Alguns formatos de arquivo são mais adequados para edição do que outros. Por exemplo, se você precisar editar um vídeo, é melhor convertê-lo para um formato que seja suportado pelo editor de vídeo que você está usando.</p>
-        </ol>
-
-        <p>Para converter arquivos, podemos usar um software instalado no computador ou um site conversor de arquivos online. Os softwares instalados oferecem mais recursos, mas são mais caros e difíceis de usar. Os sites conversores de arquivos online são mais simples e gratuitos, mas geralmente oferecem menos recursos.</p>
-
-        <p>Os sites conversores de arquivos oferecem diversos benefícios, como facilidade de uso, acessibilidade, versatilidade e segurança. Ao selecionar um site conversor de arquivos, é importante considerar os formatos de conversão, qualidade da conversão e segurança.</p>
-
-        <p>Os sites conversores de arquivos são uma ferramenta essencial para quem precisa converter arquivos com frequência. Eles são fáceis de usar, acessíveis e oferecem uma ampla variedade de formatos de conversão.</p>
-
-        <h3><i>Título 3</i></h3>
-        <h4><u>Título 4</u></h4>
-        <h5>Título <sub>5</sub></h5>
-        <h6>Título <sup>6</sup></h6>
-
-        <blockquote><small>Einstein <del>disse:</del> </small><mark>"A imaginação é mais importante que o conhecimento."</mark></blockquote>
-        <p><abbr title="Einstein">Eins</abbr></p>
-    </div>
-
-
-    <div>
-        <table border="1" summary= width="1050" align="center" cellspacing="5" cellpadding="30">
-            <caption style="font-size: 35px;">Planos disponíveis</caption>
-            <tbody>
-                <tr>
-                    <td></td>
-                    <th style="font-size: 25px; text-align: center;">Básico Freemium</th>
-                    <th style="font-size: 25px; text-align: center;">Total Pass</th>
-                </tr>
-                <tr>
-                    <th style="font-size: 25px;">Plano mensal</th>
-                    <td style="font-size: 25px; text-align: center;">$ 00</td>
-                    <td style="font-size: 25px; text-align: center;">$ 3,33</td>
-                </tr>
-                <tr>
-                    <th style="font-size: 25px;">Processar documentos</th>
-                    <td style="font-size: 25px; text-align: center;">∞ Documentos ilimitados</td>
-                    <td style="font-size: 25px; text-align: center;">∞ Documentos ilimitados</td>
-                </tr>
-                <tr>
-                    <th style="font-size: 25px;">Publicidade e propagandas</th>
-                    <td style="font-size: 25px; text-align: center;">Contém anúncios</td>
-                    <td style="font-size: 25px; text-align: center;">Livre de anúncios</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-
-
-    <div>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2603.3638995777133!2d-123.26201582351179!3d49.26950147139089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x548672b3db30ffad%3A0xf6711cf4e0ad84e3!2sMuseu%20de%20Antropologia!5e0!3m2!1spt-BR!2sbr!4v1703094896749!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
+    <footer>
+        <div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2603.3638995777133!2d-123.26201582351179!3d49.26950147139089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x548672b3db30ffad%3A0xf6711cf4e0ad84e3!2sMuseu%20de%20Antropologia!5e0!3m2!1spt-BR!2sbr!4v1703094896749!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </footer>
 </body>
-
 </html>
