@@ -27,6 +27,7 @@
   
   .logo_inicial {
     padding-left: 500px;
+    filter: drop-shadow(2px 2px 2px gray);
   }
   
   #menu_up ul {
