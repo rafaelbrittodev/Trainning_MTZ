@@ -1,24 +1,27 @@
 @font-face {
     font-family: Montserrat;
     src: url("../fonts/montserrat/Montserrat-Regular.otf");
+    font-family: raleway;
+    src: url("../fonts/raleway/Raleway-VariableFont_wght.ttf");
   }
   
   * {
-    font-family: Montserrat;
+    font-family: raleway;
     text-align: justify;
-    margin: 10px;
+    margin: 5px;
   }
   
   fieldset {
     margin: 10px;
     border-radius: 10px;
+    text-align: center;
   }
   
   .fieldset_index {
-    margin: 10px;
+    margin: 1vw;
     border-radius: 10px;
-    width: 1220px;
-    height: 30px;
+    width: 92vw;
+    height: 10vw;
   }
   
   div {
@@ -26,40 +29,44 @@
   }
   
   .logo_inicial {
-    padding-left: 500px;
+    text-align: center;
     filter: drop-shadow(2px 2px 2px gray);
   }
   
   #menu_up ul {
     display: flex;
     list-style: none;
-    margin: 0px;
+    margin: 1%;
+    justify-content: center;
+    align-items: center;
+    padding: 0vw;
+    gap: 10vw;
   }
   
-  #menu_up ul li a {
-    padding: 10px 80px;
+  #menu_up li a {
     text-decoration: none;
   }
   
-  #menu_up ul li a:hover {
-    color: blue;
-    padding: 10px 80px;
+  #menu_up li a:hover {
+    color: #34acdc;
   }
   
-  #convert_options ul {
-    display: flex;
+  #convert_options li {
+    display: inline-flex;
     list-style: none;
-    margin: 0px;
-
-  }
-  
-  #convert_options ul li a {
-    padding: 10px 65px;
+    background-color: #34acdc;
+    color: white;
     text-decoration: none;
+    padding: 1vw 5.5vw;
+    margin: 3vw;
+    border-radius: 1vw;
+    width: auto;
+    height: auto;
   }
   
-  #convert_options ul li a:hover {
-    color: blue;
-    padding: 10px 65px;
+  #convert_options li a:hover {
+    color: white;
   }
+
+
   
