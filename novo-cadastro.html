@@ -41,19 +41,19 @@
                 'custom_title': customType + ':' + customTitle,
             });
         }
-    
+
         document.getElementById('nome-completo').addEventListener('input', function () {
             trackInteraction('novo-cadastro', 'nome-campo', 'interacao:nome-completo');
         });
-    
+
         document.getElementById('data-de-nascimento').addEventListener('input', function () {
             trackInteraction('novo-cadastro', 'calendario', 'data-de-nascimento');
         });
-    
+
         document.getElementById('email').addEventListener('input', function () {
             trackInteraction('novo-cadastro', 'campo', 'email');
         });
-    
+
         document.getElementById('senha').addEventListener('input', function () {
             trackInteraction('novo-cadastro', 'campo', 'senha');
         });
@@ -63,7 +63,7 @@
     <script>
         function trackFormSubmit(event) {
             var isFormValid = true;
-    
+
             if (!isFormValid) {
                 event.preventDefault();
             } else {
@@ -76,7 +76,7 @@
                 });
             }
         }
-    
+
         document.getElementById('Formulario').addEventListener('submit', trackFormSubmit);
     </script>
     <!-- End Event Custom Callback -->
