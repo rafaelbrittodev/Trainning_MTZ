@@ -15,6 +15,20 @@
         });
     </script>
     <!-- End Event Page View -->
+    <!-- Event Custom Clique -->
+    <script>
+        function trackLink(customSection, customType, customTitle) {
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+                'event': 'clique',
+                'event_type': 'event_custom',
+                'custom_section': customSection,
+                'custom_type': customType,
+                'custom_title': customType + ':' + customTitle,
+            });
+        }
+    </script>
+    <!-- End Event Custom Clique -->
 
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
@@ -33,12 +47,23 @@
     <header>
         <div id="menu_up">
             <nav>
-                <h1 class="logo_inicial"><img width="250" src="img/logo_converttoo.png"></h1>
+                <h1 class="logo_inicial"><img src="img/logo_converttoo.png"></h1>
                 <ul>
-                    <li><a href="index.html" class="header">Página inicial</a></li>
-                    <li><a href="termos-de-uso.html" class="header">Termos de uso</a></li>
-                    <li><a href="novo-cadastro.html" class="header">Novo cadastro</a></li>
-                    <li><a href="#login" class="header"><u>Login</u></a></li>
+                    <li><a href="index.html" class="header" id="index" type="link"
+                            onclick="trackLink(this.getAttribute('id'), this.getAttribute('class'), this.getAttribute('id'))">Página
+                            inicial</a>
+                    </li>
+                    <li><a href="termos-de-uso.html" class="header" id="termos-de-uso" type="link"
+                            onclick="trackLink(this.getAttribute('id'), this.getAttribute('class'), this.getAttribute('id'))">Termos
+                            de uso</a>
+                    </li>
+                    <li><a href="novo-cadastro.html" class="header" id="novo-cadastro" type="link"
+                            onclick="trackLink(this.getAttribute('id'), this.getAttribute('class'), this.getAttribute('id'))">Novo
+                            cadastro</a>
+                    </li>
+                    <li><a href="#login" class="header" id="login" type="link"
+                            onclick="trackLink(this.getAttribute('id'), this.getAttribute('class'), this.getAttribute('id'))"><u>Login</u></a>
+                    </li>
                 </ul>
             </nav>
             <hr />
@@ -53,7 +78,10 @@
 
             <ul>
                 <li>
-                    <a href="index.html" title="Voltar para o menu inicial." class="return-index"> Voltar para o
+                    <a href="index.html" title="Voltar para o menu inicial." class="return-index" id="PNG-to-JPG"
+                        type="link"
+                        onclick="trackLink(this.getAttribute('id'), this.getAttribute('type'), this.getAttribute('class'))">
+                        Voltar para o
                         início.</a>
                 </li>
 
