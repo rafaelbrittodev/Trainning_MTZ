@@ -59,7 +59,23 @@
         });
     </script>
     <!-- End Event Custom Interacao -->
+    <!-- Event Custom Callback -->
+    <script>
+        function trackFormSubmit() {
+            var isFormValid = true;
 
+            if (isFormValid) {
+                window.dataLayer = window.dataLayer || [];
+                window.dataLayer.push({
+                    'event': 'callback',
+                    'event_type': 'event_custom',
+                    'custom_section': 'novo-cadastro',
+                    'custom_typeError': 'sucesso',
+                });
+            }
+        }
+    </script>
+    <!-- End Event Custom Callback -->
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
         integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
@@ -120,7 +136,7 @@
             </div>
 
             <div class="button_area">
-                <button type="submit" class="botao">Cadastrar</button>
+                <button type="submit" class="botao" onclick="trackFormSubmit()">Cadastrar</button>
                 </form>
             </div>
         </fieldset>
