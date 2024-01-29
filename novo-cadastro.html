@@ -63,7 +63,7 @@
     <script>
         function trackFormSubmit(event) {
             var isFormValid = true;
-
+    
             if (!isFormValid) {
                 event.preventDefault();
             } else {
@@ -76,7 +76,7 @@
                 });
             }
         }
-
+    
         document.getElementById('Formulario').addEventListener('submit', trackFormSubmit);
     </script>
     <!-- End Event Custom Callback -->
@@ -122,7 +122,7 @@
     <fieldset>
         <legend>Novo Cadastro</legend>
         <div class="row">
-            <form onsubmit="alert('Cadastro realizado!');" method="get" class="cadastrar" id="Formulario">
+            <form onsubmit="trackFormSubmit(event);" method="get" class="cadastrar" id="Formulario">
                 <label>Nome completo *:</label>
                 <p><input required type="text" name="name" class="campo" id="nome-completo" /></p>
                 <p></p>
