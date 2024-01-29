@@ -30,56 +30,10 @@
     </script>
     <!-- End Event Custom Clique -->
     <!-- Event Custom Interacao -->
-    <script>
-        function trackInteraction(customSection, customType, customTitle) {
-            window.dataLayer = window.dataLayer || [];
-            window.dataLayer.push({
-                'event': 'interacao',
-                'event_type': 'event_custom',
-                'custom_section': customSection,
-                'custom_type': customType,
-                'custom_title': customType + ':' + customTitle,
-            });
-        }
-    </script>
-    <script>
-        document.getElementById('nome-completo').addEventListener('input', function () {
-            trackInteraction('novo-cadastro', 'nome-campo', 'interacao:nome-completo');
-        });
 
-        document.getElementById('data-de-nascimento').addEventListener('input', function () {
-            trackInteraction('novo-cadastro', 'calendario', 'data-de-nascimento');
-        });
-
-        document.getElementById('email').addEventListener('input', function () {
-            trackInteraction('novo-cadastro', 'campo', 'email');
-        });
-
-        document.getElementById('senha').addEventListener('input', function () {
-            trackInteraction('novo-cadastro', 'campo', 'senha');
-        });
-    </script>
     <!-- End Event Custom Interacao -->
     <!-- Event Custom Callback 1-->
-    <script>
-        function trackFormSubmit(event) {
-            var isFormValid = true;
 
-            if (!isFormValid) {
-                event.preventDefault();
-            } else {
-                window.dataLayer = window.dataLayer || [];
-                window.dataLayer.push({
-                    'event': 'callback',
-                    'event_type': 'event_custom',
-                    'custom_section': 'novo-cadastro',
-                    'custom_typeError': 'sucesso',
-                });
-            }
-        }
-
-        document.getElementById('Formulario').addEventListener('submit', trackFormSubmit);
-    </script>
     <!-- End Event Custom Callback -->
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
@@ -123,7 +77,7 @@
     <fieldset>
         <legend>Novo Cadastro</legend>
         <div class="row">
-            <form method="get" class="cadastrar" id="Formulario">
+            <form onsubmit="alert('Cadastro realizado!');" method="get" class="cadastrar" id="Formulario">
                 <label>Nome completo *:</label>
                 <p><input required type="text" name="name" class="campo" id="nome-completo" /></p>
                 <p></p>
