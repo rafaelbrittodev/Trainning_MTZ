@@ -31,7 +31,7 @@
     <!-- End Event Custom Clique -->
     <!-- Event Custom Interacao -->
     <script>
-        function trackInteraciton(customSection, customType, customTitle) {
+        function trackInteracton(customSection, customType, customTitle) {
             window.dataLayer = window.dataLayer || [];
             window.dataLayer.push({
                 'event': 'interacao',
@@ -93,32 +93,31 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body>
-    <header>
-        <div id="menu_up">
-            <nav>
-                <h1 class="logo_inicial"><img src="img/logo_converttoo.png"></h1>
-                <ul>
-                    <li><a href="index.html" class="header" id="index" type="link"
-                            onclick="trackLink(this.getAttribute('id'), this.getAttribute('class'), this.getAttribute('id'))">Página
-                            inicial</a>
-                    </li>
-                    <li><a href="termos-de-uso.html" class="header" id="termos-de-uso" type="link"
-                            onclick="trackLink(this.getAttribute('id'), this.getAttribute('class'), this.getAttribute('id'))">Termos
-                            de uso</a>
-                    </li>
-                    <li><a href="novo-cadastro.html" class="header" id="novo-cadastro" type="link"
-                            onclick="trackLink(this.getAttribute('id'), this.getAttribute('class'), this.getAttribute('id'))">Novo
-                            cadastro</a>
-                    </li>
-                    <li><a href="#login" class="header" id="login" type="link"
-                            onclick="trackLink(this.getAttribute('id'), this.getAttribute('class'), this.getAttribute('id'))"><u>Login</u></a>
-                    </li>
-                </ul>
-            </nav>
-            <hr />
-        </div>
-    </header>
+<header>
+    <div id="menu_up">
+        <nav>
+            <h1 class="logo_inicial"><img src="img/logo_converttoo.png"></h1>
+            <ul>
+                <li><a href="index.html" class="header" id="index" type="link"
+                        onclick="trackLink(this.getAttribute('id'), this.getAttribute('class'), this.getAttribute('id'))">Página
+                        inicial</a>
+                </li>
+                <li><a href="termos-de-uso.html" class="header" id="termos-de-uso" type="link"
+                        onclick="trackLink(this.getAttribute('id'), this.getAttribute('class'), this.getAttribute('id'))">Termos
+                        de uso</a>
+                </li>
+                <li><a href="novo-cadastro.html" class="header" id="novo-cadastro" type="link"
+                        onclick="trackLink(this.getAttribute('id'), this.getAttribute('class'), this.getAttribute('id'))">Novo
+                        cadastro</a>
+                </li>
+                <li><a href="#login" class="header" id="login" type="link"
+                        onclick="trackLink(this.getAttribute('id'), this.getAttribute('class'), this.getAttribute('id'))"><u>Login</u></a>
+                </li>
+            </ul>
+        </nav>
+        <hr />
+    </div>
+</header>
 
     <main>
         <fieldset>
