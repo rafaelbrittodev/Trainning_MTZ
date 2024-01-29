@@ -1,12 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- Google Tag Manager -->
     <script src="assets/js/gtm_head.js"></script>
     <!-- End Google Tag Manager -->
+    <!-- Event Page View -->
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+            'event': 'page_view',
+            'event_type': 'event_view_custom',
+            'custom_section': 'novo-cadastro',
+        });
+    </script>
+    <!-- End Event Page View -->
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Converttoo | Cadastrar nova conta</title>
@@ -35,17 +48,25 @@
             <legend>Novo Cadastro</legend>
             <div class="row">
                 <form onsubmit="alert('Cadastro realizado!');" method="get" class="cadastrar">
-                    <label>Nome completo *:</label><p><input required type="text" name="name" class="campo" id="nome-completo"/></p><p></p>
-                    <label>Data de nascimento *:</label><p><input required type="date" name="birthday" class="calendario" id="data-de-nascimento"/></p>
-                    <label>Email *:</label><p><input required minlength="3" type="email" name="email" class="campo" id="email"/></p>
-                    <label>Senha *:</label><p><input required minlength="9" type="password" name="password" class="campo" id="senha"/></p>
-                    <label>Aceito os <a href="pg_user_terms.html" title="user_terms" target="_blank">termos de uso</a> <input type="checkbox" name="acept_terms[]" value="acept_terms" class="checkbox" id="checkbox"/></label><p></p>
+                    <label>Nome completo *:</label>
+                    <p><input required type="text" name="name" class="campo" id="nome-completo" /></p>
+                    <p></p>
+                    <label>Data de nascimento *:</label>
+                    <p><input required type="date" name="birthday" class="calendario" id="data-de-nascimento" /></p>
+                    <label>Email *:</label>
+                    <p><input required minlength="3" type="email" name="email" class="campo" id="email" /></p>
+                    <label>Senha *:</label>
+                    <p><input required minlength="9" type="password" name="password" class="campo" id="senha" /></p>
+                    <label>Aceito os <a href="pg_user_terms.html" title="user_terms" target="_blank">termos de uso</a>
+                        <input type="checkbox" name="acept_terms[]" value="acept_terms" class="checkbox"
+                            id="checkbox" /></label>
+                    <p></p>
             </div>
-            
-        <div class="button_area">
-                <button type="submit" class="botao" >Cadastrar</button>
-            </form>
-        </div>
+
+            <div class="button_area">
+                <button type="submit" class="botao">Cadastrar</button>
+                </form>
+            </div>
         </fieldset>
     </main>
 
@@ -53,11 +74,13 @@
         <div>
             <ul>
                 <li>
-                    <a href="index.html" title="Voltar para o menu inicial."  class="return-index"> Voltar para o início.</a>
+                    <a href="index.html" title="Voltar para o menu inicial." class="return-index"> Voltar para o
+                        início.</a>
                 </li>
             </ul>
         </div>
     </footer>
-    
+
 </body>
+
 </html>
