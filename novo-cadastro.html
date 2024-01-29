@@ -64,9 +64,12 @@
         function trackFormSubmit() {
             var isFormValid = true;
 
-            if (isFormValid) {
+            if (!isFormValid) {
+                event.preventDefault();
+            } else {
                 window.dataLayer = window.dataLayer || [];
                 window.dataLayer.push({
+
                     'event': 'callback',
                     'event_type': 'event_custom',
                     'custom_section': 'novo-cadastro',
@@ -74,6 +77,8 @@
                 });
             }
         }
+        document.getElementById('Formulario').addEventListener('submit', trackFormSubmit);
+
     </script>
     <!-- End Event Custom Callback -->
 
@@ -119,7 +124,7 @@
         <fieldset>
             <legend>Novo Cadastro</legend>
             <div class="row">
-                <form onsubmit="alert('Cadastro realizado!');" method="get" class="cadastrar">
+                <form onsubmit="alert('Cadastro realizado!');" method="get" class="cadastrar" id="Formulario">
                     <label>Nome completo *:</label>
                     <p><input required type="text" name="name" class="campo" id="nome-completo" /></p>
                     <p></p>
@@ -136,7 +141,7 @@
             </div>
 
             <div class="button_area">
-                <button type="submit" class="botao" onclick="trackFormSubmit()">Cadastrar</button>
+                <button type="submit" class="botao">Cadastrar</button>
                 </form>
             </div>
         </fieldset>
