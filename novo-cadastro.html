@@ -29,6 +29,37 @@
         }
     </script>
     <!-- End Event Custom Clique -->
+    <!-- Event Custom Interacao -->
+    <script>
+        function trackInteraciton(customSection, customType, customTitle) {
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+                'event': 'interacao',
+                'event_type': 'event_custom',
+                'custom_section': customSection,
+                'custom_type': customType,
+                'custom_title': customType + ':' + customTitle,
+            });
+        }
+
+        document.getElementById('nome-completo').addEventListener('input', function () {
+            trackInteraction('novo-cadastro', 'nome-campo', 'interacao:nome-completo');
+        });
+
+        document.getElementById('data-de-nascimento').addEventListener('input', function () {
+            trackInteraction('novo-cadastro', 'calendario', 'data-de-nascimento');
+        });
+
+        document.getElementById('email').addEventListener('input', function () {
+            trackInteraction('novo-cadastro', 'campo', 'email');
+        });
+
+        document.getElementById('senha').addEventListener('input', function () {
+            trackInteraction('novo-cadastro', 'campo', 'senha');
+        });
+    </script>
+    <!-- End Event Custom Interacao -->
+
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
         integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
