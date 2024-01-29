@@ -41,7 +41,8 @@
                 'custom_title': customType + ':' + customTitle,
             });
         }
-
+    </script>
+    <script>
         document.getElementById('nome-completo').addEventListener('input', function () {
             trackInteraction('novo-cadastro', 'nome-campo', 'interacao:nome-completo');
         });
@@ -122,7 +123,7 @@
     <fieldset>
         <legend>Novo Cadastro</legend>
         <div class="row">
-            <form onsubmit="trackFormSubmit(event);" method="get" class="cadastrar" id="Formulario">
+            <form method="get" class="cadastrar" id="Formulario">
                 <label>Nome completo *:</label>
                 <p><input required type="text" name="name" class="campo" id="nome-completo" /></p>
                 <p></p>
