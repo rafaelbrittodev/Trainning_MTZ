@@ -98,24 +98,24 @@
     <fieldset>
         <legend>Novo Cadastro</legend>
         <div class="row">
-            <form onsubmit="alert('Cadastro realizado!'); trackCallback(this.getAttribute('name'))" method="get" name="novo-cadastro" class="cadastrar" id="Formulario">
+            <form onsubmit="event.preventDefault(); alert('Cadastro realizado!'); trackCallback(this.getAttribute('name'));" method="get" name="novo-cadastro" class="cadastrar" id="Formulario">
                 <label>Nome completo *:</label>
                 <p><input required type="text" name="novo-cadastro" class="campo" id="nome-completo" 
                     onchange="trackInteracao(this.getAttribute('name'), this.getAttribute('class'), this.getAttribute('id'))"></p>
                 <p></p>
                 <label>Data de nascimento *:</label>
                 <p><input required type="date" name="novo-cadastro" class="calendario" id="data-de-nascimento" 
-                    onchange="trackInteracao(this.getAttribute('name'), this.getAttribute('class'), this.getAttribute('id'))"> /></p>
+                    onchange="trackInteracao(this.getAttribute('name'), this.getAttribute('class'), this.getAttribute('id'))"></p>
                 <label>Email *:</label>
                 <p><input required minlength="3" type="email" name="novo-cadastro" class="campo" id="email" 
-                    onchange="trackInteracao(this.getAttribute('name'), this.getAttribute('class'), this.getAttribute('id'))"> /></p>
+                    onchange="trackInteracao(this.getAttribute('name'), this.getAttribute('class'), this.getAttribute('id'))"></p>
                 <label>Senha *:</label>
                 <p><input required minlength="9" type="password" name="novo-cadastro" class="campo" id="senha"
-                    onchange="trackInteracao(this.getAttribute('name'), this.getAttribute('class'), this.getAttribute('id'))"> /></p>
+                    onchange="trackInteracao(this.getAttribute('name'), this.getAttribute('class'), this.getAttribute('id'))"></p>
 
                 <label>Aceito os <a href="pg_user_terms.html" title="user_terms" target="_blank">termos de uso</a>
                     <input type="checkbox" name="acept_terms[]" value="acept_terms" class="checkbox"
-                        id="checkbox" /></label>
+                        id="checkbox" onchange="trackInteracao(this.getAttribute('name'), this.getAttribute('class'), this.getAttribute('id'))" /></label>
                 <p></p>
             </form>
         </div>
