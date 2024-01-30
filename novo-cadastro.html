@@ -114,14 +114,15 @@
                     onchange="trackInteracao(this.getAttribute('name'), this.getAttribute('class'), this.getAttribute('id'))"></p>
 
                 <label>Aceito os <a href="pg_user_terms.html" title="user_terms" target="_blank">termos de uso</a>
-                    <input type="checkbox" name="acept_terms[]" value="acept_terms" class="checkbox"
-                        id="checkbox" onchange="trackInteracao(this.getAttribute('name'), this.getAttribute('class'), this.getAttribute('id'))" /></label>
+                    <input type="checkbox" name="novo-cadastro" value="acept_terms" class="checkbox" id="checkbox"
+                    onchange="trackInteracao(this.getAttribute('name'), this.getAttribute('class'), this.getAttribute('id'))" /></label>
                 <p></p>
             </form>
         </div>
 
         <div class="button_area">
-            <button type="submit" class="botao">Cadastrar</button>
+            <button type="submit" class="botao" name="novo-cadastro" id="botao"
+            onsubmit="trackInteracao(this.getAttribute('name'), this.getAttribute('class'), this.getAttribute('id'))">Cadastrar</button>
         </div>
     </fieldset>
 </main>
