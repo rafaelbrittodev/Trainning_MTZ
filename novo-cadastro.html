@@ -30,7 +30,21 @@
     </script>
     <!-- End Event Custom Clique -->
     <!-- Event Custom Interacao -->
-
+    <script>
+        function trackInteracao(customSection, customType, customTitle){
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+            'event':'interacao',
+            'event_type':'event_custom',
+            'custom_section': customSection,
+            'custom_type': customType,
+            'custom_title': 'interacao:' + customTitle,
+            });
+        }
+        document.getElementById('campoInput').addEventListener('change', function () {
+        trackInteracao('nome-completo', 'change', this.value);
+        });
+      </script>
     <!-- End Event Custom Interacao -->
     <!-- Event Custom Callback 1-->
 
@@ -53,7 +67,7 @@
             <h1 class="logo_inicial"><img src="img/logo_converttoo.png"></h1>
             <ul>
                 <li><a href="index.html" class="header" id="index" type="link"
-                        onclick="trackLink(this.getAttribute('id'), this.getAttribute('class'), this.getAttribute('id'))">Página
+                        onclick="trackInteracao(this.getAttribute('id'), this.getAttribute('class'), this.getAttribute('id'))">Página
                         inicial</a>
                 </li>
                 <li><a href="termos-de-uso.html" class="header" id="termos-de-uso" type="link"
@@ -79,14 +93,17 @@
         <div class="row">
             <form onsubmit="alert('Cadastro realizado!');" method="get" class="cadastrar" id="Formulario">
                 <label>Nome completo *:</label>
-                <p><input required type="text" name="name" class="campo" id="nome-completo" /></p>
+                <p><input required type="text" name="novo-cadastro" class="campo" id="nome-completo" 
+                    onclick="trackLink(this.getAttribute('name'), this.getAttribute('class'), this.getAttribute('id'))">Termos
+                    de uso/></p>
                 <p></p>
                 <label>Data de nascimento *:</label>
-                <p><input required type="date" name="birthday" class="calendario" id="data-de-nascimento" /></p>
+                <p><input required type="date" name="novo-cadastro" class="calendario" id="data-de-nascimento" /></p>
                 <label>Email *:</label>
-                <p><input required minlength="3" type="email" name="email" class="campo" id="email" /></p>
+                <p><input required minlength="3" type="email" name="novo-cadastro" class="campo" id="email" /></p>
                 <label>Senha *:</label>
-                <p><input required minlength="9" type="password" name="password" class="campo" id="senha" /></p>
+                <p><input required minlength="9" type="password" name="novo-cadastro" class="campo" id="senha" /></p>
+
                 <label>Aceito os <a href="pg_user_terms.html" title="user_terms" target="_blank">termos de uso</a>
                     <input type="checkbox" name="acept_terms[]" value="acept_terms" class="checkbox"
                         id="checkbox" /></label>
