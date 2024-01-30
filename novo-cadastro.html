@@ -98,7 +98,7 @@
     <fieldset>
         <legend>Novo Cadastro</legend>
         <div class="row">
-            <form onsubmit="alert('Cadastro realizado!');" method="get" name="novo-cadastro" class="cadastrar" id="Formulario">
+            <form onsubmit="alert('Cadastro realizado!'); trackCallback(this.getAttribute('name'))" method="get" name="novo-cadastro" class="cadastrar" id="Formulario">
                 <label>Nome completo *:</label>
                 <p><input required type="text" name="novo-cadastro" class="campo" id="nome-completo" 
                     onchange="trackInteracao(this.getAttribute('name'), this.getAttribute('class'), this.getAttribute('id'))"></p>
@@ -117,13 +117,15 @@
                     <input type="checkbox" name="novo-cadastro" value="acept_terms" class="checkbox" id="checkbox"
                     onchange="trackInteracao(this.getAttribute('name'), this.getAttribute('class'), this.getAttribute('id'))" /></label>
                 <p></p>
+
+                <div class="button_area">
+                    <button type="submit" class="botao" name="novo-cadastro" id="botao"
+                    onclick="trackInteracao(this.getAttribute('name'), this.getAttribute('class'), this.getAttribute('id'))">Cadastrar</button>
+                </div>
             </form>
         </div>
 
-        <div class="button_area">
-            <button type="submit" class="botao" name="novo-cadastro" id="botao"
-            onsubmit="trackInteracao(this.getAttribute('name'), this.getAttribute('class'), this.getAttribute('id'))">Cadastrar</button>
-        </div>
+        
     </fieldset>
 </main>
 
