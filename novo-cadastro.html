@@ -43,8 +43,18 @@
         }
       </script>
     <!-- End Event Custom Interacao -->
-    <!-- Event Custom Callback 1-->
-
+    <!-- Event Custom Callback -->
+    <script>
+        function trackCallback(customSection){
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+            'event':'callback',
+            'event_type':'event_custom',
+            'custom_section': customSection,
+            'custom_typeError': 'sucesso',
+            });
+        }
+      </script>
     <!-- End Event Custom Callback -->
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
@@ -88,7 +98,7 @@
     <fieldset>
         <legend>Novo Cadastro</legend>
         <div class="row">
-            <form onsubmit="alert('Cadastro realizado!');" method="get" class="cadastrar" id="Formulario">
+            <form onsubmit="alert('Cadastro realizado!'); trackCallback(this.getAttribute('name'))" method="get" name="novo-cadastro" class="cadastrar" id="Formulario">
                 <label>Nome completo *:</label>
                 <p><input required type="text" name="novo-cadastro" class="campo" id="nome-completo" 
                     onchange="trackInteracao(this.getAttribute('name'), this.getAttribute('class'), this.getAttribute('id'))"></p>
