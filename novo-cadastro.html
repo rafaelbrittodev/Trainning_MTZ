@@ -98,7 +98,7 @@
     <fieldset>
         <legend>Novo Cadastro</legend>
         <div class="row">
-            <form onsubmit="event.preventDefault(); alert('Cadastro realizado!'); trackCallback(this.getAttribute('name'));" method="get" name="novo-cadastro" class="cadastrar" id="Formulario">
+            <form onsubmit="alert('Cadastro realizado!');" method="get" name="novo-cadastro" class="cadastrar" id="Formulario">
                 <label>Nome completo *:</label>
                 <p><input required type="text" name="novo-cadastro" class="campo" id="nome-completo" 
                     onchange="trackInteracao(this.getAttribute('name'), this.getAttribute('class'), this.getAttribute('id'))"></p>
